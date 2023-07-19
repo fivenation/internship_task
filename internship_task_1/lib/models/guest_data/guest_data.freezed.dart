@@ -29,7 +29,7 @@ mixin _$GuestData {
   @JsonKey(name: 'status')
   String get status => throw _privateConstructorUsedError;
   @JsonKey(name: 'avatarUrl')
-  String get avatarUrl => throw _privateConstructorUsedError;
+  String? get avatarUrl => throw _privateConstructorUsedError;
   @JsonKey(name: 'phone')
   String get phone => throw _privateConstructorUsedError;
 
@@ -49,7 +49,7 @@ abstract class $GuestDataCopyWith<$Res> {
       @JsonKey(name: 'firstname') String firstname,
       @JsonKey(name: 'age') int age,
       @JsonKey(name: 'status') String status,
-      @JsonKey(name: 'avatarUrl') String avatarUrl,
+      @JsonKey(name: 'avatarUrl') String? avatarUrl,
       @JsonKey(name: 'phone') String phone});
 }
 
@@ -70,7 +70,7 @@ class _$GuestDataCopyWithImpl<$Res, $Val extends GuestData>
     Object? firstname = null,
     Object? age = null,
     Object? status = null,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? phone = null,
   }) {
     return _then(_value.copyWith(
@@ -90,10 +90,10 @@ class _$GuestDataCopyWithImpl<$Res, $Val extends GuestData>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       phone: null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
@@ -114,7 +114,7 @@ abstract class _$$_GuestDataCopyWith<$Res> implements $GuestDataCopyWith<$Res> {
       @JsonKey(name: 'firstname') String firstname,
       @JsonKey(name: 'age') int age,
       @JsonKey(name: 'status') String status,
-      @JsonKey(name: 'avatarUrl') String avatarUrl,
+      @JsonKey(name: 'avatarUrl') String? avatarUrl,
       @JsonKey(name: 'phone') String phone});
 }
 
@@ -133,7 +133,7 @@ class __$$_GuestDataCopyWithImpl<$Res>
     Object? firstname = null,
     Object? age = null,
     Object? status = null,
-    Object? avatarUrl = null,
+    Object? avatarUrl = freezed,
     Object? phone = null,
   }) {
     return _then(_$_GuestData(
@@ -153,10 +153,10 @@ class __$$_GuestDataCopyWithImpl<$Res>
           ? _value.status
           : status // ignore: cast_nullable_to_non_nullable
               as String,
-      avatarUrl: null == avatarUrl
+      avatarUrl: freezed == avatarUrl
           ? _value.avatarUrl
           : avatarUrl // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       phone: null == phone
           ? _value.phone
           : phone // ignore: cast_nullable_to_non_nullable
@@ -173,7 +173,7 @@ class _$_GuestData implements _GuestData {
       @JsonKey(name: 'firstname') required this.firstname,
       @JsonKey(name: 'age') required this.age,
       @JsonKey(name: 'status') required this.status,
-      @JsonKey(name: 'avatarUrl') required this.avatarUrl,
+      @JsonKey(name: 'avatarUrl') this.avatarUrl,
       @JsonKey(name: 'phone') required this.phone});
 
   factory _$_GuestData.fromJson(Map<String, dynamic> json) =>
@@ -193,7 +193,7 @@ class _$_GuestData implements _GuestData {
   final String status;
   @override
   @JsonKey(name: 'avatarUrl')
-  final String avatarUrl;
+  final String? avatarUrl;
   @override
   @JsonKey(name: 'phone')
   final String phone;
@@ -243,7 +243,7 @@ abstract class _GuestData implements GuestData {
       @JsonKey(name: 'firstname') required final String firstname,
       @JsonKey(name: 'age') required final int age,
       @JsonKey(name: 'status') required final String status,
-      @JsonKey(name: 'avatarUrl') required final String avatarUrl,
+      @JsonKey(name: 'avatarUrl') final String? avatarUrl,
       @JsonKey(name: 'phone') required final String phone}) = _$_GuestData;
 
   factory _GuestData.fromJson(Map<String, dynamic> json) =
@@ -263,7 +263,7 @@ abstract class _GuestData implements GuestData {
   String get status;
   @override
   @JsonKey(name: 'avatarUrl')
-  String get avatarUrl;
+  String? get avatarUrl;
   @override
   @JsonKey(name: 'phone')
   String get phone;

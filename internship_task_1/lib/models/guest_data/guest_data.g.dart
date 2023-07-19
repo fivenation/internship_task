@@ -11,7 +11,7 @@ _$_GuestData _$$_GuestDataFromJson(Map<String, dynamic> json) => _$_GuestData(
       firstname: json['firstname'] as String,
       age: json['age'] as int,
       status: json['status'] as String,
-      avatarUrl: json['avatarUrl'] as String,
+      avatarUrl: json['avatarUrl'] as String?,
       phone: json['phone'] as String,
     );
 

@@ -11,7 +11,7 @@ class GuestData with _$GuestData {
     @JsonKey(name: 'firstname') required String firstname,
     @JsonKey(name: 'age') required int age,
     @JsonKey(name: 'status') required String status,
-    @JsonKey(name: 'avatarUrl') required String avatarUrl,
+    @JsonKey(name: 'avatarUrl') String? avatarUrl,
     @JsonKey(name: 'phone') required String phone,
   }) = _GuestData;
 

@@ -66,7 +66,7 @@ class TestApi implements Api {
         ProductData(
           title: 'Морепродукты',
           url: "https://avatars.dzeninfra.ru/get-zen_doc/1857554/pub_5eb954959f339d116671abe5_5ec28b1e1ad73a7902ea4d01/scale_1200",
-          ingredients: [ "Устрицы", "Мидии", "Молюски", "Креветки", "Лобстер", "Крабовое мясо" ],
+          ingredients: [ "Устрицы", "Мидии", "Молюски", "Креветки", "Лобстер", "Крабовое мясо", "Икра чёрная", "Икра красная", "Омар", "Кольмар", "Осьминог" ],
         ),
         ProductData(
           title: 'Свежие фрукты',
@@ -81,7 +81,7 @@ class TestApi implements Api {
       ],
       entertainmentList: [
         EntertainmentData(
-          iconUrl: 'https://cdn-icons-png.flaticon.com/512/938/938590.png',
+          iconUrl: 'https://cdn-icons-png.flaticon.com/128/3616/3616220.png',
           title: 'Настольные игры',
           description: "Мафия, уно, домино, экивоки и другие",
         ),
@@ -89,6 +89,11 @@ class TestApi implements Api {
           iconUrl: 'https://cdn-icons-png.flaticon.com/512/447/447852.png',
           title: "Бассейн",
           description: "Два бассейна с подогревом",
+        ),
+        EntertainmentData(
+          iconUrl: 'https://cdn-icons-png.flaticon.com/128/3616/3616002.png',
+          title: "Мини-кинотеатр",
+          description: "Маленький кинотеатр для просмотра небольшой компанией",
         ),
       ],
       location: LocationData(

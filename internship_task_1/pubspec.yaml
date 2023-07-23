@@ -19,6 +19,9 @@ dependencies:
   injectable: ^2.1.1
   bloc: ^8.1.2
   provider: ^6.0.5
+  flutter_screenutil: ^5.8.4
+  url_launcher: ^6.1.12
+  yandex_mapkit: ^3.3.3
 
 
 dev_dependencies:
@@ -33,3 +36,20 @@ dev_dependencies:
 flutter:
   uses-material-design: true
   generate: true
+  assets:
+    - assets/images/
+
+  fonts:
+    - family: YesevaOne
+      fonts:
+        - asset: assets/fonts/YesevaOne-Regular.ttf
+    - family: Jost
+      fonts:
+        - asset: assets/fonts/Jost-Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Jost-Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Jost-SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Jost-Bold.ttf
+          weight: 700

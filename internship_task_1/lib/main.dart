@@ -9,7 +9,7 @@ Future<void> main() async {
   Zone.current.run(() {
     WidgetsFlutterBinding.ensureInitialized();
     getIt.init(environment: "test");
-    runApp(RunApplication());
+    runApp(const RunApplication());
   });
 }
 

@@ -26,6 +26,7 @@ class WishAddForm extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
+          SizedBox(height: 20.h,),
           CustomFormWidget(hint: "Название", controller: _titleController,),
           CustomFormWidget(hint: "Ссылка", controller: _urlController,),
 

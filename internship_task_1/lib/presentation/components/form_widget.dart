@@ -27,7 +27,6 @@ class CustomFormWidget extends StatelessWidget {
         style: textTheme.displayLarge!.copyWith(color: colorScheme.primaryOnLightTextColor, fontWeight: FontWeight.w500),
         decoration: InputDecoration(
           border: InputBorder.none,
-          hintText: "Введите имя",
           label: Text(
             hint,
             style: textTheme.displayLarge!.copyWith(color: colorScheme.secondaryTextColor,),

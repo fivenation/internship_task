@@ -3,8 +3,8 @@ import 'dart:async';
 import 'package:bloc/bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:injectable/injectable.dart';
-import 'package:internship_task_1/data/repository/repository_interface.dart';
-import 'package:internship_task_1/models/place_data/place_data.dart';
+import 'package:internship_task_1/domain/repository/place_repository_interface.dart';
+import 'package:internship_task_1/domain/models/place_data/place_data.dart';
 
 part 'place_state.dart';
 part 'place_event.dart';
@@ -15,7 +15,7 @@ part 'place_bloc.freezed.dart';
 @test
 @singleton
 class PlaceBloc extends Bloc<PlaceEvent, PlaceState> {
-  final Repository _repository;
+  final PlaceRepository _repository;
 
   PlaceBloc(this._repository) : super(const PlaceState.loading()) {
     on<_PlaceLoadEvent>(_onPlaceLoadEvent);

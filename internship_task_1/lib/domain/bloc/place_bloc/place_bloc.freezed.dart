@@ -183,6 +183,8 @@ abstract class _$$_PlaceSuccessfulStateCopyWith<$Res> {
       __$$_PlaceSuccessfulStateCopyWithImpl<$Res>;
   @useResult
   $Res call({PlaceData data});
+
+  $PlaceDataCopyWith<$Res> get data;
 }
 
 /// @nodoc
@@ -196,14 +198,22 @@ class __$$_PlaceSuccessfulStateCopyWithImpl<$Res>
   @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? data = freezed,
+    Object? data = null,
   }) {
     return _then(_$_PlaceSuccessfulState(
-      data: freezed == data
+      data: null == data
           ? _value.data
           : data // ignore: cast_nullable_to_non_nullable
               as PlaceData,
     ));
+  }
+
+  @override
+  @pragma('vm:prefer-inline')
+  $PlaceDataCopyWith<$Res> get data {
+    return $PlaceDataCopyWith<$Res>(_value.data, (value) {
+      return _then(_value.copyWith(data: value));
+    });
   }
 }
 
@@ -225,12 +235,11 @@ class _$_PlaceSuccessfulState implements _PlaceSuccessfulState {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _$_PlaceSuccessfulState &&
-            const DeepCollectionEquality().equals(other.data, data));
+            (identical(other.data, data) || other.data == data));
   }
 
   @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
+  int get hashCode => Object.hash(runtimeType, data);
 
   @JsonKey(ignore: true)
   @override

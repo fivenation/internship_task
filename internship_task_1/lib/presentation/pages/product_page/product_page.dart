@@ -1,9 +1,11 @@
+import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:internship_task_1/models/product_data/product_data.dart';
+import 'package:internship_task_1/domain/models/product_data/product_data.dart';
 import 'package:internship_task_1/presentation/pages/product_page/product_app_bar.dart';
 import 'package:internship_task_1/presentation/theme/color_scheme.dart';
 
+//@RoutePage()
 class ProductPage extends StatelessWidget {
   const ProductPage({Key? key, required this.item}) : super(key: key);
 

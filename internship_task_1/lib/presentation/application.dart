@@ -1,13 +1,22 @@
+import 'dart:convert';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:internship_task_1/domain/dependencies/service_locator.dart';
-import 'package:internship_task_1/presentation/pages/landing.dart';
+import 'package:internship_task_1/presentation/pages/home_page/home_page.dart';
 import 'package:internship_task_1/presentation/theme/theme_data.dart';
 
 import 'components/custom_progress_indicator.dart';
 
-class RunApplication extends StatelessWidget {
+class RunApplication extends StatefulWidget {
   const RunApplication({Key? key}) : super(key: key);
+
+  @override
+  State<RunApplication> createState() => _RunApplicationState();
+}
+
+class _RunApplicationState extends State<RunApplication> {
+  //final appRouter = getIt<AppRouter>();
 
   @override
   Widget build(BuildContext context) {
@@ -16,6 +25,7 @@ class RunApplication extends StatelessWidget {
       designSize: const Size(375 , 812),
       builder: (BuildContext context, Widget? child) {
         return MaterialApp(
+          // NAVIGATION
 
           // THEME
           theme: AppTheme.lightTheme,
@@ -25,7 +35,7 @@ class RunApplication extends StatelessWidget {
             future: getIt.allReady(),
             builder: (BuildContext context, AsyncSnapshot snapshot) {
               if(snapshot.hasData) {
-                return const LandingPage();
+                return const HomePage();
               } else {
                 return const CustomProgressIndicator();
               }
@@ -35,5 +45,4 @@ class RunApplication extends StatelessWidget {
       },
     );
   }
-  
 }

@@ -88,6 +88,15 @@ class AppTheme {
   static ThemeData get lightTheme {
     return ThemeData(
       brightness: Brightness.light,
+      appBarTheme: const AppBarTheme(
+        centerTitle: true,
+        color: _primaryColor,
+
+      ),
+      floatingActionButtonTheme: const FloatingActionButtonThemeData(
+        elevation: 0.0,
+        backgroundColor: _buttonColor_2,
+      ),
       textTheme: TextTheme(
         titleLarge: _titleStyle, // название страниц
         titleMedium: _header1Style, // заголовок раздела
